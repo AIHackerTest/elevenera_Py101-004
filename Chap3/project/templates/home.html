@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>weather report</title>
+  <style type="text/css">
+  body
+  {
+    background-image: url(http://www.ftourusa.com/uploads/allimg/120207/10-12020G45321.jpg);
+    padding: 20px;
+    text-align:center;
+    font-family: sans-serif;
+  }
+  p{color: white;font-size: 20px;text-align:center}
+  h1{text-align:center;}
+  form{font-size: 20px;}
+  input[type='text']
+  {
+    width: 450px;
+    height: 40px;
+    margin-bottom: 10px;
+    text-align:center;
+    font-size: 20px;
+    border:red solid thin;
+  }
+  input[type='submit']
+  {
+    width:120px;
+    height: 30px;
+    margin-left: 25px;
+    text-align:center;
+    font-size: 15px;
+  }
+
+  .weather{
+    background-color: teal;
+    color: white;
+    margin:20px;
+    padding: 20px;
+  }
+  </style>
+</head>
+
+<body>
+<div class="weather">
+<h1>City Weather Report</h1>
+
+<form action="/location" method="GET">
+  <fieldset>
+    <legend>City Weather</legend>
+  您要查询天气的城市City:<br/>
+  <input type="text" name="city" placeholder="Input the name of city you want">
+  <br/>
+  <input type="submit" name="btn" value="search">
+  <input type="submit" name="btn" value="help">
+  <input type="submit" name="btn" value="history">
+</form>
+
+{% block content %}
+<p>Welcome to Eleven WeatherReport!</p>
+<p>天气数据来源于：
+<a href="https://www.seniverse.com/">心知天气</a><br></p>
+{% endblock %}
+
+</div>
+
+<hr/>
+<p>Welcome to Eleven WeatherReport!</p>
+<p>天气数据来源于：
+<a href="https://www.seniverse.com/">心知天气</a><br></p>
+</body>
+
+</html>

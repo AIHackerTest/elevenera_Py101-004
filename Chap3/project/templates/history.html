@@ -1,0 +1,9 @@
+{% extends "home.html" %}
+{% block content %}
+    <h3>您的查询历史是：<br/></h3>
+    <ul>
+    {% for weather_history in history %}
+        <li>{{ weather_history }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
